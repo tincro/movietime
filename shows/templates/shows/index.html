@@ -1,9 +1,22 @@
 {% extends 'shows/layout.html' %}
+{% load static %}
 
 {% block title %}
     MovieTime Cinema
 {% endblock %}
 
 {% block body %}
-    Index Layout is working!
+    <h2>Movies</h2>
+
+    <div class="row">
+    {% for movie in movieList %}
+        <div class="card text-center">
+            <img src="{{ movie.image }}" class="card-img-top" alt="placeholder">
+            <div class="card-body">
+                <h5 class="card-title">{{ movie.title }}</h5>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
 {% endblock %}
