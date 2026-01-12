@@ -9,3 +9,8 @@ def index(request):
     context = {"movieList": movies}
 
     return render(request, 'shows/index.html', context)
+
+def tickets(request):
+    # grab all showtimes, group by movie title
+    
+    return render(request, 'shows/tickets.html')
