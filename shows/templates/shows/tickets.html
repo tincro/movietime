@@ -1,0 +1,22 @@
+{% extends 'shows/layout.html' %}
+
+{% block body %}
+    
+    <h2>Tickets</h2>
+
+    <div class="row">
+    {% for movie in showtimes %}
+
+        <div class="col">
+            <div class="card text-center">
+                <img src="{{ movie.title }}" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ movie.title }}</h5>
+                </div>
+            </div>
+        </div>
+
+    {% endfor %}
+    </div>
+
+{% endblock %}
